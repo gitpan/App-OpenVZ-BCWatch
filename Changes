@@ -1,5 +1,10 @@
 Revision history for Perl extension App::OpenVZ::BCWatch.
 
+0.03_01  2012-12-05  <schubiger@cpan.org>
+
+ - Fix "Test failures due to hash randomisation in perl 5.17.6"
+   [rt #81605 - Andreas Koenig]
+
 0.03  2010-08-21  <schubiger@cpan.org>
 
  - Merged development version to stable.

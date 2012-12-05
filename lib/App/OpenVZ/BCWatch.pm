@@ -12,7 +12,7 @@ use Mail::Sendmail qw(sendmail);
 use Storable qw(store retrieve);
 use Sys::Hostname qw(hostname);
 
-our $VERSION = '0.03';
+our $VERSION = '0.03_01';
 
 sub new
 {
@@ -164,8 +164,8 @@ sub _compare_data
         return scalar grep { $data->($_) > $stored->($_) } @{$self->{Config}->{monitor_fields}};
     };
 
-    foreach my $uid (keys %{$self->{stored}}) {
-        foreach my $res (keys %{$self->{stored}{$uid}}) {
+    foreach my $uid (sort {$a <=> $b} keys %{$self->{stored}}) {
+        foreach my $res (sort {$a cmp $b} keys %{$self->{stored}{$uid}}) {
             foreach my $index (0 .. $#{$self->{stored}{$uid}{$res}}) {
                 if ($has_changed->($uid, $res, $index)) {
                     $self->_create_report($uid, $res, $index);

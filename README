@@ -19,14 +19,12 @@ DESCRIPTION
 
 CONSTRUCTOR
   new
-
      $watch = App::OpenVZ::BCWatch->new;
 
     Instantiate an `App::OpenVZ::BCWatch' object.
 
 METHODS
   process
-
      $watch->process;
 
     Inspect whether the user_beancounters file differs from the last run,
@@ -42,14 +40,12 @@ CONFIGURATION FILE
     configuration file.
 
   Syntax
-
     The configuration file is being parsed by Config::File. Unless noted
     otherwise, each option takes exactly one value. Specifying more than one
     value for an option requires that the values are separated by
     whitespace.
 
   Options
-
     Adjustable options with defaults are:
 
     * `mail[from]'
@@ -88,6 +84,7 @@ CURRENT LIMITATIONS
     * Only version 2.5 of the user_beancounters file is known to work.
     * Fixed mail report template.
     * No more than one mail recipient.
+
 BUGS & CAVEATS
     Note that the sender and recipient mail address options with defaults
     might require adjustment in order for notifications to be delivered.
