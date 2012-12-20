@@ -48,14 +48,14 @@
    "provides" : {
       "App::OpenVZ::BCWatch" : {
          "file" : "lib/App/OpenVZ/BCWatch.pm",
-         "version" : "0.03_01"
+         "version" : "0.04"
       }
    },
-   "release_status" : "testing",
+   "release_status" : "stable",
    "resources" : {
       "license" : [
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.03_01"
+   "version" : "0.04"
 }
